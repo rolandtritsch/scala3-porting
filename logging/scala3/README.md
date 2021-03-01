@@ -1,0 +1,6 @@
+# Notes ...
+
+* scala3 does not support scala macros
+* means scala-logging is not working (for now)
+* you can try to use [logback](http://logback.qos.ch/) directly or ...
+* (for now) you can use [log]()
