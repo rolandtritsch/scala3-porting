@@ -5,6 +5,6 @@ case class Color(name: String, red: Int, green: Int, blue: Int)
 case class Colors(colors: List[Color])
 
 object ColorYamlProtocol extends DefaultYamlProtocol {
-  implicit val colorFormat = yamlFormat4(Color)
-  implicit val colorsFormat = yamlFormat1(Colors)
+  implicit val colorFormat: YamlFormat[Color] = yamlFormat4(Color.apply)
+  implicit val colorsFormat: YamlFormat[Colors] = yamlFormat1(Colors.apply)
 }
