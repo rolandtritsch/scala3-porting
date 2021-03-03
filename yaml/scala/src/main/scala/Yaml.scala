@@ -1,5 +1,6 @@
 import net.jcazevedo.moultingyaml._
-import net.jcazevedo.moultingyaml.DefaultYamlProtocol._
+//import net.jcazevedo.moultingyaml.DefaultYamlProtocol._
+import ColorYamlProtocol._
 
 object Yaml {
   def main(args: Array[String]): Unit = {
