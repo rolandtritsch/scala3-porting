@@ -4,7 +4,7 @@ import net.jcazevedo.moultingyaml.DefaultYamlProtocol._
 case class Color(name: String, red: Int, green: Int, blue: Int)
 case class Colors(colors: List[Color])
 
-object ColorYamlProtocol extends DefaultYamlProtocol {
+object ColorsYamlProtocol extends DefaultYamlProtocol {
   implicit val colorFormat: YamlFormat[Color] = yamlFormat4(Color.apply)
   implicit val colorsFormat: YamlFormat[Colors] = yamlFormat1(Colors.apply)
 }
