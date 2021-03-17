@@ -1,12 +1,12 @@
-import upickle.default.{ReadWriter => RW, macroRW}
+import OptionPickler.{ReadWriter => RW, macroRW}
 
 object model {
 
   case class SingularityResources(
-      cpus: Double,
+      cpus: Option[Double] = None,
       memoryMb: Double,
       numPorts: Int,
-      diskMb: Int
+      diskMb: Option[Int] = None
   )
 
   object SingularityResources {
