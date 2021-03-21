@@ -1,0 +1,14 @@
+{
+    "network": "network",
+    "image": "image",
+    "portMappings": [
+        {"containerPort": 8080, "hostPortType": "hostPortType", "containerPortType": "containerPortType", "hostPort": 8081, "protocol": "protocol"},
+        {"containerPort": 8080, "hostPortType": "hostPortType", "containerPortType": "containerPortType", "hostPort": 8081, "protocol": "protocol"}
+    ],
+    "forcePullImage": true,
+    "dockerParameters": [
+        {"key": "key", "value": "value"},
+        {"key": "key", "value": "value"},
+        {"key": "key", "value": "value"}
+    ]
+}

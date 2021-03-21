@@ -127,12 +127,13 @@ object model {
     implicit val rw: RW[SingularityScaleRequest] = macroRW
   }
 
-
   case class SingularityRequestParent(
       request: SingularityRequest,
       state: String,
       taskIds: Option[SingularityTaskIdsByStatus] = None,
-      activeDeploy: Option[SingularityRequestParent.SingularityActiveDeployResponse] = None
+      activeDeploy: Option[
+        SingularityRequestParent.SingularityActiveDeployResponse
+      ] = None
   )
 
   object SingularityRequestParent {
@@ -270,7 +271,7 @@ object model {
     }
 
     case class SingularityTaskInfo(
-      container: SingularityTaskContainerInfo
+        container: SingularityTaskContainerInfo
     )
 
     object SingularityTaskInfo {
@@ -290,7 +291,7 @@ object model {
 
   object SingularityLog {
     implicit val rw: RW[SingularityLog] = macroRW
-  }  
+  }
 
   case class SingularityTaskIdsByStatus(
       healthy: Seq[SingularityTaskId]
@@ -298,6 +299,6 @@ object model {
 
   object SingularityTaskIdsByStatus {
     implicit val rw: RW[SingularityTaskIdsByStatus] = macroRW
-  }  
+  }
 
 }
