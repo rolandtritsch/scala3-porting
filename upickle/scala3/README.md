@@ -1,0 +1,3 @@
+# Notes ...
+
+* run `sbt test`
