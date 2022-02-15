@@ -13,7 +13,6 @@ class JsonSpec extends AnyFlatSpec with should.Matchers {
     read[SingularityResources](json) should be (expected)    
   }
 
-
   "reading docker-info.json" should "convert to case class" in {
     val json = scala.io.Source.fromResource("docker-info.json").mkString
     val expected = SingularityDockerInfo(
